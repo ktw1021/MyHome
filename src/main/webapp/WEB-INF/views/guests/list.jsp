@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<link type="text/css" rel="stylesheet" href="<c:url value='/css/guestbook.css'/>">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -43,6 +44,7 @@
         </table>
         <br/>
     </c:forEach>
-    
+    <br>
+<a href="${pageContext.request.contextPath}">메인으로 돌아가기</a>
 </body>
 </html>
