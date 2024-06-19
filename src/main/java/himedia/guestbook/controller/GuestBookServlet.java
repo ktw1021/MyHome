@@ -1,6 +1,7 @@
 package himedia.guestbook.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 import himedia.guestbook.dao.GuestBookDao;
@@ -90,7 +91,14 @@ public class GuestBookServlet extends BaseServlet {
                     resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "데이터 삭제 중 오류가 발생했습니다.");
                 }
             } else {
-                resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "패스워드가 틀립니다.");
+            	resp.setContentType("text/html;charset=UTF-8");
+                PrintWriter out = resp.getWriter();
+                out.println("<script>");
+                out.println("alert('비밀번호가 일치하지 않습니다.');");
+                out.println("window.location.href = '" + req.getContextPath() + "/guestbook';");
+                out.println("</script>");
+                out.flush();
+                
             }
         } else if ("update".equals(actionName)) {
             // UPDATE 기능 수행
@@ -111,7 +119,13 @@ public class GuestBookServlet extends BaseServlet {
                 }
             } else {
                 // 비밀번호가 일치하지 않으면 오류 응답
-                resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "패스워드가 틀립니다.");
+            	resp.setContentType("text/html;charset=UTF-8");
+                PrintWriter out = resp.getWriter();
+                out.println("<script>");
+                out.println("alert('비밀번호가 일치하지 않습니다.');");
+                out.println("window.location.href = '" + req.getContextPath() + "/guestbook';");
+                out.println("</script>");
+                out.flush();
             }
 
         } else {
