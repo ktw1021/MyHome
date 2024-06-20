@@ -118,7 +118,7 @@ public class GuestBookServlet extends BaseServlet {
                     resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "데이터 수정 중 오류가 발생했습니다.");
                 }
             } else {
-                // 비밀번호가 일치하지 않으면 오류 응답
+                // 비밀번호가 일치하지 않으면 오류 응답(-> 알림창으로 수정)
             	resp.setContentType("text/html;charset=UTF-8");
                 PrintWriter out = resp.getWriter();
                 out.println("<script>");
