@@ -15,6 +15,8 @@ import jakarta.servlet.http.HttpSession;
 @WebServlet("/users")
 public class UserServlet extends BaseServlet{
 
+	private static final long serialVersionUID = 1L;
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// a=joinform -> 가입 폼 페이지로 FORWARD

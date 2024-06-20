@@ -8,6 +8,11 @@
 <title>방명록</title>
 </head>
 <body>
+<div id="container">
+		<jsp:include page="/WEB-INF/views/includes/header.jsp" />
+        <jsp:include page="/WEB-INF/views/includes/navigation.jsp"/>
+<div id="wrapper">
+<div id="content">
     <form action="${pageContext.request.contextPath}/guestbook?a=insert" method="post">
         <table border="1" width="500">
             <tr>
@@ -45,6 +50,11 @@
         <br/>
     </c:forEach>
     <br>
-<a href="${pageContext.request.contextPath}">메인으로 돌아가기</a>
+
+            </div>
+        </div>
+    
+        <%@ include file="/WEB-INF/views/includes/footer.jsp" %>
+    </div>
 </body>
 </html>

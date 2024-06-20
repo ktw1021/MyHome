@@ -16,6 +16,11 @@ String errorMsg = (String)request.getAttribute("errorMsg");
 <title>My Home: Login</title>
 </head>
 <body>
+<div id="container">
+		<jsp:include page="/WEB-INF/views/includes/header.jsp" />
+        <jsp:include page="/WEB-INF/views/includes/navigation.jsp"/>
+<div id="wrapper">
+<div id="content">
 	<h1>Login</h1>
 	<%
 	// 에러메시지 출력( 만약 있다면 )
@@ -33,5 +38,9 @@ String errorMsg = (String)request.getAttribute("errorMsg");
 		<input type="password" name="password" /><br/>
 		<input type="submit" value="로그인" />
 	</form>
+</div>
+</div>
+	 <jsp:include page="/WEB-INF/views/includes/footer.jsp"/>
+	 </div>
 </body>
 </html>
