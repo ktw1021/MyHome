@@ -1,21 +1,14 @@
 package himedia.board.model;
 
-public class Post {
+public class PostVo {
     private int id;
     private String title;
     private String author;
     private String createdDate;
     private int viewCount;
+    private String content;
 
-    public Post(int id, String title, String author, String createdDate, int viewCount) {
-        this.id = id;
-        this.title = title;
-        this.author = author;
-        this.createdDate = createdDate;
-        this.viewCount = viewCount;
-    }
-
-    // Getters and Setters
+    // Getters and setters
     public int getId() {
         return id;
     }
@@ -54,5 +47,13 @@ public class Post {
 
     public void setViewCount(int viewCount) {
         this.viewCount = viewCount;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 }
